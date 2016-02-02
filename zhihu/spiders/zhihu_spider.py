@@ -168,10 +168,10 @@ class zhihuSpider(CrawlSpider):
 
     def parse_answer_detail(self, response):
        answer_url = response.url
-       answer = response.xpath("//h2[@class='zm-item-title zm-editable-content']/a/text()").extract()
+       answer = response.xpath("//h2[@class='zm-item-title zm-editable-content']/a/text()").extract()   #could be wrong
        info("answer url:"+ answer_url )
        info("answer :"+ answer[0].decode() )
-       meta = Answer()
+       meta = Answer()  #Answer() is from the item.py
        meta['title'] = answer[0].decode()
        meta['url'] = answer_url 
        return meta
