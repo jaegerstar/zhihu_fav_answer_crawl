@@ -81,7 +81,7 @@ class zhihuSpider(CrawlSpider):
             }
 
 
-    BASE_POPLE = "https://www.zhihu.com/people/"
+    BASE_PEOPLE = "https://www.zhihu.com/people/"
     COLLECTION = "collections"
     name = "zhihu" #here is the key to name spider,if not match will throw spider not found error
     allowed_domains = ["zhihu.com"]
